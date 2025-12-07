@@ -1,64 +1,109 @@
+# ===========================================
+# ALIANCIA CADASTRO - .gitignore
+# ===========================================
+
 # Ambiente virtual Python
 venv/
 .venv/
 env/
+ENV/
+
+# Variáveis de ambiente (NUNCA commitar!)
 .env
+.env.local
+.env.production
+.env.*.local
 
 # Cache Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+*.pyo
+*.pyd
 
-# Next.js
+# Next.js / Frontend
 frontend/node_modules/
 frontend/.next/
 frontend/out/
+frontend/.turbo/
+node_modules/
 
 # Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
 # Runtime data
-pids
+pids/
 *.pid
 *.seed
 *.pid.lock
 
-# Editor
+# Editor / IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.sublime-*
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Database local
+# Database local (NUNCA commitar banco de produção!)
 *.db
+*.sqlite
 *.sqlite3
 
 # Arquivos de build
 dist/
 build/
 *.egg-info/
+*.egg
 
-# Coverage
+# Coverage / Testing
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
-
-# Pytest
+*.py,cover
+.hypothesis/
 .pytest_cache/
+pytest_cache/
 
-# Mypy
+# Mypy / Type checking
 .mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Secrets / Credentials
+*.pem
+*.key
+secrets/
