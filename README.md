@@ -1,11 +1,49 @@
 # 🚀 ALIANCIA - Sistema de Cadastro e Indicações
 
-Sistema completo de cadastro com rede de indicações multinível, pagamentos via PIX e painel administrativo.
+<div align="center">
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?logo=fastapi)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)
-![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwindcss)
+![ALIANCIA Logo](https://img.shields.io/badge/ALIANCIA-Sistema%20Multinível-gold?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJMMiAyMmgyMEwxMiAyeiIvPjwvc3ZnPg==)
+
+**Sistema completo de cadastro com rede de indicações multinível, pagamentos via PIX e painel administrativo.**
+
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python)](https://python.org/)
+[![License](https://img.shields.io/badge/License-Proprietário-red?style=flat-square)](LICENSE)
+
+[🌐 Site do Desenvolvedor](https://www.luduranoficiall.com) • [📧 Contato](mailto:luduranoficiall@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/luduranoficiall)
+
+</div>
+
+---
+
+## 📋 Índice
+
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias](#️-tecnologias)
+- [Instalação](#-instalação)
+- [API Endpoints](#-endpoints-da-api)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Deploy](#-deploy)
+- [Screenshots](#-screenshots)
+- [Autor](#-autor)
+- [Licença](#-licença)
+
+---
+
+## 🎯 Sobre o Projeto
+
+O **ALIANCIA** é um sistema profissional de cadastro multinível desenvolvido com as tecnologias mais modernas do mercado. Oferece uma experiência completa para gestão de redes de indicação, com painel administrativo robusto, integração com PIX para pagamentos e design premium responsivo.
+
+### 🌟 Destaques
+- **Performance**: Backend em FastAPI (um dos frameworks mais rápidos)
+- **Segurança**: Criptografia AES-256 + JWT + bcrypt
+- **Design**: Interface moderna com Glass Morphism
+- **Escalabilidade**: Arquitetura preparada para milhares de usuários
+- **Mobile-First**: 100% responsivo
 
 ## ✨ Funcionalidades
 
@@ -181,14 +219,78 @@ O frontend utiliza um design **Glass Morphism** moderno:
 - 🎬 Animações suaves CSS
 - 📱 100% responsivo (mobile-first)
 
+## 📸 Screenshots
+
+<div align="center">
+
+| Login | Painel | Admin |
+|:-----:|:------:|:-----:|
+| Glass Morphism | Estatísticas | Gestão de Membros |
+
+| Cadastro | Extrato | Ranking |
+|:--------:|:-------:|:-------:|
+| 3 Etapas | Financeiro | Top Indicadores |
+
+</div>
+
+## 🔧 Variáveis de Ambiente
+
+Crie um arquivo `.env` baseado no `.env.example`:
+
+```env
+# Segurança
+SECRET_KEY=sua_chave_secreta_min_32_chars
+FERNET_KEY=sua_chave_fernet_base64
+
+# Banco de Dados
+DATABASE_URL=sqlite:///./aliancia.db
+
+# JWT
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+ALGORITHM=HS256
+
+# PIX
+PIX_KEY=sua_chave_pix
+PIX_NOME=Nome Recebedor
+```
+
+## 🤝 Contribuição
+
+Este é um projeto proprietário. Para contribuições ou parcerias comerciais, entre em contato.
+
 ## 📄 Licença
 
-Este projeto é proprietário. Todos os direitos reservados.
+Este projeto é **proprietário**. Todos os direitos reservados.
 
-## 👨‍💻 Autor
-
-**Extraordinária AI** - Desenvolvimento de soluções inteligentes
+**© 2025 Ludurano Oficial. Todos os direitos reservados.**
 
 ---
 
-⭐ Se este projeto te ajudou, deixe uma estrela!
+## 👨‍💻 Autor
+
+<div align="center">
+
+<img src="https://github.com/Luduranoficiall.png" width="120" style="border-radius: 50%;" alt="Ludurano Oficial"/>
+
+### **Ludurano Oficial**
+
+*Desenvolvedor Full Stack | Especialista em Sistemas Web*
+
+[![Website](https://img.shields.io/badge/🌐_Website-www.luduranoficiall.com-gold?style=for-the-badge)](https://www.luduranoficiall.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Luduranoficiall-181717?style=for-the-badge&logo=github)](https://github.com/Luduranoficiall)
+[![Email](https://img.shields.io/badge/Email-luduranoficiall@gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:luduranoficiall@gmail.com)
+
+</div>
+
+---
+
+<div align="center">
+
+**Desenvolvido com ❤️ por [Ludurano Oficial](https://www.luduranoficiall.com)**
+
+⭐ **Se este projeto te ajudou, deixe uma estrela!** ⭐
+
+![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)
+![Brazil](https://img.shields.io/badge/Made%20in-Brazil%20🇧🇷-green?style=flat-square)
+
+</div>
