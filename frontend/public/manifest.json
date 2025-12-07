@@ -1,0 +1,16 @@
+{
+  "name": "ALIANCIA — Cadastro Premium",
+  "short_name": "ALIANCIA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#3b82f6",
+  "description": "Sistema profissional de 3 níveis da ALIANCI.A",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
