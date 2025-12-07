@@ -13,7 +13,7 @@
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python)](https://python.org/)
 [![License](https://img.shields.io/badge/License-Proprietário-red?style=flat-square)](LICENSE)
 
-[🌐 Site do Desenvolvedor](https://www.luduranoficiall.com) • [📧 Contato](mailto:luduranoficiall@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/luduranoficiall)
+[🌐 Site do Desenvolvedor](https://www.luduranoficiall.com) • [📱 WhatsApp](https://wa.me/5512996182268) • [💼 LinkedIn](https://linkedin.com/in/luduranoficiall)
 
 </div>
 
@@ -277,8 +277,8 @@ Este projeto é **proprietário**. Todos os direitos reservados.
 *Desenvolvedor Full Stack | Especialista em Sistemas Web*
 
 [![Website](https://img.shields.io/badge/🌐_Website-www.luduranoficiall.com-gold?style=for-the-badge)](https://www.luduranoficiall.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-+55_12_99618--2268-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5512996182268)
 [![GitHub](https://img.shields.io/badge/GitHub-Luduranoficiall-181717?style=for-the-badge&logo=github)](https://github.com/Luduranoficiall)
-[![Email](https://img.shields.io/badge/Email-luduranoficiall@gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:luduranoficiall@gmail.com)
 
 </div>
 
