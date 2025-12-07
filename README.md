@@ -262,7 +262,7 @@ Este é um projeto proprietário. Para contribuições ou parcerias comerciais, 
 
 Este projeto é **proprietário**. Todos os direitos reservados.
 
-**© 2025 Ludurano Oficial. Todos os direitos reservados.**
+**© 2025 Luduranoficiall. Todos os direitos reservados.**
 
 ---
 
@@ -270,9 +270,9 @@ Este projeto é **proprietário**. Todos os direitos reservados.
 
 <div align="center">
 
-<img src="https://github.com/Luduranoficiall.png" width="120" style="border-radius: 50%;" alt="Ludurano Oficial"/>
+<img src="https://github.com/Luduranoficiall.png" width="120" style="border-radius: 50%;" alt="Luduranoficiall"/>
 
-### **Ludurano Oficial**
+### **Luduranoficiall**
 
 *Desenvolvedor Full Stack | Especialista em Sistemas Web*
 
@@ -286,7 +286,7 @@ Este projeto é **proprietário**. Todos os direitos reservados.
 
 <div align="center">
 
-**Desenvolvido com ❤️ por [Ludurano Oficial](https://www.luduranoficiall.com)**
+**Desenvolvido com ❤️ por [Luduranoficiall](https://www.luduranoficiall.com)**
 
 ⭐ **Se este projeto te ajudou, deixe uma estrela!** ⭐
 
