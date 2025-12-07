@@ -175,7 +175,7 @@ CADASTRO-ALIANCIA/
 ├── database.py          # Configuração do banco
 ├── requirements.txt     # Dependências Python
 ├── Dockerfile           # Container Docker
-├── fly.toml             # Deploy Fly.io
+├── vercel.json          # Config Vercel
 ├── alembic/             # Migrações
 │
 └── frontend/            # Next.js App
@@ -197,18 +197,29 @@ CADASTRO-ALIANCIA/
 
 ## 🚀 Deploy
 
-### Fly.io (Backend)
+### Vercel (Frontend + Backend)
 ```bash
-fly auth login
-fly launch
-fly deploy
+# Instale a CLI da Vercel
+npm i -g vercel
+
+# Na pasta do projeto
+vercel
+
+# Para produção
+vercel --prod
 ```
 
-### Vercel (Frontend)
-```bash
-cd frontend
-vercel
-```
+### Cloudflare (DNS + CDN)
+1. Adicione seu domínio no Cloudflare
+2. Configure os nameservers
+3. Ative SSL/TLS (Full Strict)
+4. Configure as regras de cache
+
+### Variáveis de Ambiente (Vercel)
+Configure no dashboard da Vercel:
+- `DATABASE_URL`
+- `SECRET_KEY`
+- `FERNET_KEY`
 
 ## 🎨 Design Premium
 

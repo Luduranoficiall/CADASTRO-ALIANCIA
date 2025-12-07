@@ -51,12 +51,20 @@ Bem-vindo ao sistema ALIANCI.A! Tudo foi pensado para facilitar sua vida e garan
 
 Pronto! Compartilhe o link com todos para cadastro online imediato.
 
-## Como fazer deploy (Fly.io - backend)
+## Como fazer deploy (Vercel - Recomendado)
 
-1. Instale o Fly CLI: https://fly.io/docs/hands-on/install-flyctl/
-2. Rode `fly launch` na pasta do backend (FastAPI).
-3. Siga as instruções para criar app e deployar.
-4. O Fly.io gera uma URL pública para o backend.
+1. Acesse https://vercel.com e faça login com GitHub
+2. Clique em "Import Project" e selecione este repositório
+3. Configure as variáveis de ambiente no dashboard
+4. Clique em "Deploy" - pronto!
+
+## Como configurar Cloudflare (DNS + CDN)
+
+1. Crie uma conta em https://cloudflare.com
+2. Adicione seu domínio personalizado
+3. Configure os nameservers no seu registrador
+4. Ative SSL/TLS no modo "Full (Strict)"
+5. Adicione o domínio nas configurações da Vercel
 
 ## Segurança e dicas
 
