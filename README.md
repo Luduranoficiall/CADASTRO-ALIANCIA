@@ -1,77 +1,194 @@
-# ALIANCI.A — Sistema Fullstack de Cadastro Multinível
+# 🚀 ALIANCIA - Sistema de Cadastro e Indicações
 
-Este repositório contém o sistema completo de cadastro multinível para ALIANCI.A, incluindo backend (FastAPI + SQLAlchemy + JWT) e frontend (Next.js 14 + Tailwind + Recharts), servidos juntos em uma única URL.
+Sistema completo de cadastro com rede de indicações multinível, pagamentos via PIX e painel administrativo.
 
+![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?logo=fastapi)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwindcss)
 
-## Deploy Fly.io
+## ✨ Funcionalidades
 
-1. Instale o [Fly CLI](https://fly.io/docs/hands-on/install-flyctl/)
-2. Faça login: `fly auth login`
-3. Crie o app: `fly launch` (responda as perguntas)
-4. Edite `fly.toml` e `.env` com suas chaves reais
-5. Deploy: `fly deploy --remote-only`
-6. Acesse a URL pública gerada pela Fly.io
+### 👤 Usuário
+- ✅ Cadastro com link de indicação
+- ✅ Login seguro com JWT
+- ✅ Painel com estatísticas de rede (Nível 1, 2, 3)
+- ✅ Visualização da rede de indicados (árvore visual)
+- ✅ Extrato financeiro detalhado
+- ✅ Pagamento via PIX com upload de comprovante
+- ✅ Perfil editável
+- ✅ Recuperação de senha
 
-## Execução local
+### 👨‍💼 Administrador
+- ✅ Dashboard com métricas em tempo real
+- ✅ Gestão completa de membros
+- ✅ Aprovação de pagamentos
+- ✅ Relatórios exportáveis (CSV)
+- ✅ Ranking de indicações
 
-1. **Clone o repositório:**
-   ```bash
-   git clone <url-do-seu-repositorio>
-   cd aliancia_cadastro
-   ```
-2. **Crie e ative um ambiente virtual Python:**
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-3. **Instale as dependências:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Configure variáveis de ambiente:**
-   - Edite o arquivo `.env` conforme necessário.
-5. **Execute o servidor:**
-   ```bash
-   ./run.sh
-   ```
-6. **Acesse no navegador:**
-   - [http://localhost:8000](http://localhost:8000)
+### 🔐 Segurança
+- ✅ Criptografia AES-256 para dados sensíveis (CPF, telefone)
+- ✅ JWT para autenticação
+- ✅ CORS configurado
+- ✅ Headers de segurança
+- ✅ Senhas com hash bcrypt
 
+## 🛠️ Tecnologias
 
-## Segurança e Produção
+### Backend
+- **FastAPI** - Framework Python moderno e rápido
+- **SQLAlchemy** - ORM para banco de dados
+- **Alembic** - Migrações de banco
+- **JWT** - Autenticação segura
+- **Cryptography** - Criptografia AES-256
+- **Pydantic** - Validação de dados
 
-- **Troque o ADMIN_TOKEN** no `.env` por um valor forte e secreto.
-- **Configure o CORS** em `main.py` para aceitar apenas o domínio do seu frontend em produção.
-- **Use senha forte no banco** e restrinja acesso apenas para IPs necessários.
-- **Nunca exponha o banco diretamente para a internet** sem firewall.
-- **Remova variáveis não utilizadas** do `.env` (ex: MP_TOKEN se não usar Mercado Pago).
+### Frontend
+- **Next.js 14** - React framework com App Router
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização utility-first
+- **Glass Morphism** - Design premium moderno
 
-## Onboarding rápido
+## 📦 Instalação
 
-1. Configure o banco PostgreSQL e o usuário:
-   ```sql
-   CREATE DATABASE aliancia_analytics;
-   CREATE USER aliancia_user WITH PASSWORD 'sua-senha-forte';
-   GRANT ALL PRIVILEGES ON DATABASE aliancia_analytics TO aliancia_user;
-   ```
-2. Ajuste o `.env`:
-   ```
-   DATABASE_URL=postgresql+psycopg2://aliancia_user:sua-senha-forte@SEU-HOST:5432/aliancia_analytics
-   ADMIN_TOKEN=um-token-bem-forte
-   ```
-3. Siga os passos de deploy acima.
+### Requisitos
+- Python 3.10+
+- Node.js 18+
+- npm ou yarn
+
+### Backend
+
+```bash
+# Clone o repositório
+git clone https://github.com/Luduranoficiall/CADASTRO-ALIANCIA.git
+cd CADASTRO-ALIANCIA
+
+# Crie ambiente virtual
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou: venv\Scripts\activate  # Windows
+
+# Instale dependências
+pip install -r requirements.txt
+
+# Configure variáveis de ambiente
+cp .env.example .env
+# Edite o .env com suas configurações
+
+# Execute migrações
+alembic upgrade head
+
+# Inicie o servidor
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+### Frontend
+
+```bash
+cd frontend
+
+# Instale dependências
+npm install
+
+# Inicie em desenvolvimento
+npm run dev
+
+# Ou faça build para produção
+npm run build
+npm start
+```
+
+## 🌐 Endpoints da API
+
+### Autenticação
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| POST | `/register` | Cadastrar novo usuário |
+| POST | `/token` | Login (obter token) |
+| GET | `/me` | Dados do usuário logado |
+
+### Usuário
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET | `/painel` | Estatísticas do painel |
+| GET | `/rede/{id}` | Rede de indicados |
+| GET | `/extrato` | Extrato financeiro |
+| POST | `/pagar` | Registrar pagamento |
+| PUT | `/perfil` | Atualizar perfil |
+
+### Admin
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET | `/admin/membros` | Listar membros |
+| GET | `/admin/relatorios` | Relatórios |
+| PUT | `/admin/aprovar/{id}` | Aprovar pagamento |
+| DELETE | `/admin/membro/{id}` | Excluir membro |
+
+## 📁 Estrutura do Projeto
+
+```
+CADASTRO-ALIANCIA/
+├── main.py              # API FastAPI principal
+├── models.py            # Modelos SQLAlchemy
+├── schemas.py           # Schemas Pydantic
+├── crud.py              # Operações de banco
+├── auth.py              # Autenticação JWT
+├── crypto_utils.py      # Criptografia AES-256
+├── database.py          # Configuração do banco
+├── requirements.txt     # Dependências Python
+├── Dockerfile           # Container Docker
+├── fly.toml             # Deploy Fly.io
+├── alembic/             # Migrações
+│
+└── frontend/            # Next.js App
+    ├── src/
+    │   ├── app/         # Páginas (App Router)
+    │   │   ├── login/
+    │   │   ├── cadastro/
+    │   │   ├── painel/
+    │   │   ├── admin/
+    │   │   ├── extrato/
+    │   │   ├── pagar/
+    │   │   ├── perfil/
+    │   │   ├── ranking/
+    │   │   └── ...
+    │   ├── components/  # Componentes React
+    │   └── lib/         # Utilitários
+    └── public/          # Assets estáticos
+```
+
+## 🚀 Deploy
+
+### Fly.io (Backend)
+```bash
+fly auth login
+fly launch
+fly deploy
+```
+
+### Vercel (Frontend)
+```bash
+cd frontend
+vercel
+```
+
+## 🎨 Design Premium
+
+O frontend utiliza um design **Glass Morphism** moderno:
+- 🌙 Tema escuro (#0a0a0a, #1a1a1a)
+- 🪟 Efeitos de vidro com blur
+- ✨ Gradientes dourado/âmbar
+- 🎬 Animações suaves CSS
+- 📱 100% responsivo (mobile-first)
+
+## 📄 Licença
+
+Este projeto é proprietário. Todos os direitos reservados.
+
+## 👨‍💻 Autor
+
+**Extraordinária AI** - Desenvolvimento de soluções inteligentes
 
 ---
 
-## Funcionalidades
-- Cadastro multinível (3 níveis)
-- Login/JWT
-- Painel admin
-- Relatórios (Recharts)
-- Visualização de rede
-- Reset de senha/token
-- Upgrade/pagamento
-
----
-
-Desenvolvido para ALIANCI.A — 2025
+⭐ Se este projeto te ajudou, deixe uma estrela!
